@@ -4,7 +4,7 @@ include ('../../../inc/includes.php');
 
 Session::checkLoginUser();
 
-Session::checkRight("config", UPDATE);
+Session::checkRight("plugin_myhack_config", UPDATE);
 
 Html::header(__('MyHack Settings', 'myhack'), $_SERVER['PHP_SELF'], "config","PluginMyhackMenu");
 
