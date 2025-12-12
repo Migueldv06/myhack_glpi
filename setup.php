@@ -30,6 +30,9 @@ function plugin_init_myhack() {
         'plugins' => PluginMyhackMenu::class,
         'config' => PluginMyhackMenuSettings::class];
 
+    Plugin::registerClass(PluginMyhackProfile::class,
+                        ['addtabon' => Profile::class]);
+
 }
 
 function plugin_myhack_check_prerequisites() {
