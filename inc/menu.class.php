@@ -1,5 +1,5 @@
 <?php
-include ('../../../inc/includes.php');
+//include ('../../../inc/includes.php');
 
 Session::checkLoginUser();
 
@@ -10,6 +10,11 @@ class PluginMyhackMenu extends CommonGLPI {
     }
 
     static function getMenuContent(){
+
+        if(!Session::haveRight("config", READ)){
+            return;
+        }
+
         $menu = [];
 
         $menu['title'] = self::getMenuName();
@@ -30,6 +35,11 @@ class PluginMyhackMenuSettings extends CommonGLPI {
     }
 
     static function getMenuContent(){
+
+        if(!Session::haveRight("config", UPDATE)){
+            return;
+        }
+
         $menu = [];
 
         $menu['title'] = self::getMenuName();
