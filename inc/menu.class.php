@@ -11,7 +11,7 @@ class PluginMyhackMenu extends CommonGLPI {
 
     static function getMenuContent(){
 
-        if(!Session::haveRight("config", READ)){
+        if(!Session::haveRight("plugin_myhack_config", READ)){
             return;
         }
 
@@ -36,7 +36,7 @@ class PluginMyhackMenuSettings extends CommonGLPI {
 
     static function getMenuContent(){
 
-        if(!Session::haveRight("config", UPDATE)){
+        if(!Session::haveRight("plugin_myhack_config", UPDATE)){
             return;
         }
 
